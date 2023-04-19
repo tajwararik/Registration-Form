@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: linear-gradient(90deg,
+      rgba(255, 201, 0, 1) 0%,
+      rgba(45, 142, 150, 1) 100%,
+      rgba(34, 106, 97, 1) 100%);
+}
+
+.form {
+  width: 30%;
+  padding: 50px 0;
+  margin: 50px auto;
+  max-width: 800px;
+  min-width: 300px;
+  background-color: hsla(0, 100%, 100%, 0.1);
+  border-radius: 5%;
+  box-shadow: 2px 6px 10px 2px hsla(0, 47%, 27%, 0.397);
+}
+
+h1 {
+  font-family: "Gloock", serif;
+  font-size: 5.4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1:hover {
+  color: rgba(167, 221, 60, 1);
+  text-shadow: 2px 0px 0px rgba(128, 0, 64, 1),
+    3px 2px 0px rgba(77, 0, 38, 0.5),
+    3px 0px 3px rgba(255, 0, 43, 1),
+    5px 0px 3px rgba(128, 0, 21, 1),
+    6px 2px 3px rgba(77, 0, 13, 0.5),
+    6px 0px 9px rgba(255, 85, 0, 1),
+    8px 0px 9px rgba(128, 42, 0, 1),
+    9px 2px 9px rgba(77, 25, 0, 0.5),
+    9px 0px 18px rgba(255, 213, 0, 1),
+    11px 0px 18px rgba(128, 106, 0, 1),
+    12px 2px 18px rgba(77, 66, 0, 0.5),
+    12px 0px 30px rgba(212, 255, 0, 1),
+    14px 0px 30px rgba(106, 128, 0, 1),
+    15px 2px 30px rgba(64, 77, 0, 0.5),
+    15px 0px 45px rgba(128, 255, 0, 1),
+    17px 0px 45px rgba(64, 128, 0, 1),
+    17px 2px 45px rgba(38, 77, 0, 0.5);
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset > input:focus {
+  background-color: yellow;
+}
+
+.first-name,
+.last-name {
+  width: 32%;
+  border: 0 solid white;
+  border-width: 2px 4px;
+  border-radius: 40px;
+  height: 4vh;
+  font-family: "Teko", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 1px 3px 5px 1px hsla(0, 47%, 27%, 0.397);
+}
+
+.first-name {
+  margin: 6% 2.5% 0 15%;
+}
+
+.last-name {
+  margin: 6% 15% 0 2.5%;
+}
+
+.information {
+  display: block;
+  width: 70%;
+  margin: 35px auto 20px auto;
+  border: 0 solid white;
+  border-width: 2px 4px;
+  border-radius: 40px;
+  height: 4vh;
+  font-family: "Teko", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 1px 3px 5px 1px hsla(0, 47%, 27%, 0.397);
+}
+
+label {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  color: hsl(14, 96%, 30%);
+  font-family: "Teko", sans-serif;
+  margin: 3% auto;
+}
+
+#checkbox {
+  margin: 0 2px 0 0;
+  vertical-align: middle;
+}
+
+a {
+  color: rgb(165, 42, 42);
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(0, 0%, 0%);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+
+button {
+  width: 32%;
+  color: white;
+  background-color: rgba(255, 201, 0, 1);
+  border: 0 solid rgba(255, 201, 0, 1);
+  border-width: 2px 4px;
+  border-radius: 40px;
+  display: block;
+  margin: 5% auto;
+  min-width: 100px;
+  font-family: "Teko", sans-serif;
+  font-size: 1.5rem;
+  box-shadow: 1px 3px 5px 1px hsla(0, 47%, 27%, 0.397);
+}
+
+button:hover {
+  width: 35%;
+  background-color: rgba(45, 142, 150, 1);
+  color: hsl(0, 0%, 0%);
+  border: 0 solid rgba(45, 142, 150, 1);
+  box-shadow: 2px 6px 10px 2px hsla(0, 47%, 27%, 0.397);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) and (min-width: 180px) {
+  h1 {
+    font-size: 3.4rem;
+    padding-bottom: 1rem;
+  }
+
+  .first-name {
+    margin: 3% 1.25% 0 15%;
+  }
+
+  .last-name {
+    margin: 3% 15% 0 1.25%;
+  }
+
+  button {
+    font-size: large;
+  }
+}
+
+@media (max-width: 1315px) and (min-width: 1025px) {
+  h1 {
+    font-size: 3.7rem;
+  }
+
+  .first-name {
+    margin: 6% 2% 0 15%;
+  }
+
+  .last-name {
+    margin: 6% 15% 0 2%;
+  }
+
+  button {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1314px) {
+  h1 {
+    font-size: 3.9rem;
+  }
+}
