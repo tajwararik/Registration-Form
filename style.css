@@ -10,6 +10,7 @@ body {
   width: 100%;
   background: rgb(36, 111, 222);
   background: linear-gradient(90deg, rgba(36, 111, 222, 1) 0%, rgba(163, 70, 70, 1) 100%);
+  /* padding: 16px; */
 }
 
 main {
@@ -68,6 +69,10 @@ fieldset:first-of-type {
   flex-direction: row;
   justify-content: space-evenly;
   padding: 50px 0 0;
+}
+
+fieldset:first-of-type input {
+  width: 30%;
 }
 
 fieldset:nth-of-type(2) {
@@ -166,4 +171,41 @@ button:hover {
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transform: scale(1.02);
+}
+
+@media (max-width: 1460px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  button {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1230px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  fieldset:first-of-type {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 0;
+  }
+
+  fieldset:first-of-type input {
+    width: 72%;
+    margin: 20px 0;
+  }
+
+  fieldset:first-of-type input:last-child {
+    margin: 20px 0 0;
+  }
 }
