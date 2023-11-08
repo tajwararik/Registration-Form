@@ -22,6 +22,10 @@ main {
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.3);
 }
 
+form {
+  padding-bottom: 25px;
+}
+
 h1 {
   font-family: "Gloock", serif;
   font-size: 5.4rem;
@@ -86,85 +90,80 @@ fieldset:last-of-type {
   color: hsl(14, 96%, 30%);
 }
 
+fieldset:last-of-type label {
+  font-size: 1.65rem;
+  font-weight: 600;
+  display: grid;
+  grid-template-columns: 1rem auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 input[type="checkbox"] {
-  vertical-align: middle;
   box-shadow: none;
+  cursor: pointer;
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0.2rem solid #2c2929;
+  border-radius: 0.3rem;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  transform: scale(0);
+  transition: 250ms transform ease-in-out;
+  box-shadow: inset 1rem 1rem rgb(141, 52, 52);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
 
 a {
   color: rgb(165, 42, 42);
   text-decoration: none;
+  animation: light-on 1500ms ease-in-out infinite alternate;
 }
 
-a:hover {
-  color: hsl(0, 0%, 0%);
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
-    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+@keyframes light-on {
+  from {
+    color: rgb(165, 42, 42);
+  }
+
+  to {
+    color: hsl(0, 0%, 0%);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+      0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+  }
 }
 
 button {
-  width: 32%;
+  width: 25%;
   color: white;
   background-color: rgba(255, 201, 0, 1);
-  border: 0 solid rgba(255, 201, 0, 1);
-  border-width: 2px 4px;
+  border: none;
   border-radius: 40px;
   display: block;
-  margin: 5% auto;
-  min-width: 100px;
+  padding: 5px;
+  margin: 30px auto;
   font-family: "Teko", sans-serif;
   font-size: 1.5rem;
-  box-shadow: 1px 3px 5px 1px hsla(0, 47%, 27%, 0.397);
+  font-weight: 500;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-  width: 35%;
+  font-weight: 600;
   background-color: rgba(45, 142, 150, 1);
   color: hsl(0, 0%, 0%);
-  border: 0 solid rgba(45, 142, 150, 1);
-  box-shadow: 2px 6px 10px 2px hsla(0, 47%, 27%, 0.397);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-}
-
-@media (max-width: 1024px) and (min-width: 180px) {
-  h1 {
-    font-size: 3.4rem;
-    padding-bottom: 1rem;
-  }
-
-  .first-name {
-    margin: 3% 1.25% 0 15%;
-  }
-
-  .last-name {
-    margin: 3% 15% 0 1.25%;
-  }
-
-  button {
-    font-size: large;
-  }
-}
-
-@media (max-width: 1315px) and (min-width: 1025px) {
-  h1 {
-    font-size: 3.7rem;
-  }
-
-  .first-name {
-    margin: 6% 2% 0 15%;
-  }
-
-  .last-name {
-    margin: 6% 15% 0 2%;
-  }
-
-  button {
-    font-size: medium;
-  }
-}
-
-@media (max-width: 1440px) and (min-width: 1314px) {
-  h1 {
-    font-size: 3.9rem;
-  }
+  transform: scale(1.02);
 }
