@@ -34,7 +34,7 @@ h1 {
   padding-top: 50px;
   color: #fff;
   text-shadow: 3px 5px 2px #474747;
-  animation: text-shadow 1000ms ease-in-out infinite alternate;
+  animation: text-shadow 1500ms ease-in-out infinite alternate;
 }
 
 @keyframes text-shadow {
