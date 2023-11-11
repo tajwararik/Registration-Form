@@ -1,6 +1,6 @@
 # Registration-Form
 
-The registration form is created using HTML and CSS. 
+The registration form is created using HTML and CSS. This form consists many unique features and custom properties.
 
 ## Link
 
